@@ -20,4 +20,8 @@ public class OrderService {
     public Order create(Order order) {
         return orderRepository.save(order);
     }
+
+    public void setOrderRepository(OrderRepository orderRepository) {
+        this.orderRepository = orderRepository;
+    }
 }

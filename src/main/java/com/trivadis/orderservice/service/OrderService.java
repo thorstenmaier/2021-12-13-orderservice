@@ -1,27 +1,12 @@
 package com.trivadis.orderservice.service;
 
 import com.trivadis.orderservice.entity.Order;
-import com.trivadis.orderservice.repository.OrderRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 
 import java.util.List;
 
-@Component
-public class OrderService {
+public interface OrderService {
 
-    @Autowired
-    private OrderRepository orderRepository;
+    List<Order> findAll();
 
-    public List<Order> findAll() {
-        return orderRepository.findAll();
-    }
-
-    public Order create(Order order) {
-        return orderRepository.save(order);
-    }
-
-    public void setOrderRepository(OrderRepository orderRepository) {
-        this.orderRepository = orderRepository;
-    }
+    Order create(Order order);
 }

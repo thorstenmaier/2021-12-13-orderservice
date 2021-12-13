@@ -12,7 +12,7 @@ public class OrderServiceTest {
     @Test
     public void testFindAll() {
         // Given
-        OrderService service = new OrderService();
+        OrderServiceImpl service = new OrderServiceImpl();
         service.setOrderRepository(new OrderTestRepository());
 
         // When
